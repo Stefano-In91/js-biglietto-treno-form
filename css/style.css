@@ -69,6 +69,10 @@ h1 {
    display: none;
    transition: display .5s;
 }
+.show {
+   display: block;
+   transition: display .5s;
+}
 
 #ticket-field table {
    width: 100%;

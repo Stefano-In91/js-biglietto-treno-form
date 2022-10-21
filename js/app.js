@@ -1,8 +1,10 @@
 "use strict";
-// Creazione evento su click bottone Genera
-const generate = document.getElementById("generate-btn");
 
-generate.addEventListener('click', function() {
+// Localizzazione bottone Genera
+const generateBtn = document.getElementById("generate-btn");
+
+// Creazione evento su click bottone Genera
+generateBtn.addEventListener('click', function() {
 
 // Document.Get per prendere i dati inseriti negli input richiesti
    let firstName = document.getElementById("first-name").value;
@@ -41,8 +43,15 @@ generate.addEventListener('click', function() {
    let cpNum = Math.floor(Math.random() * 9999 + 90000);
    document.querySelector("td.ticket-data:nth-of-type(3)").innerHTML = `${cpNum}`;
    // Prezzo
-   document.querySelector("td.ticket-data:nth-of-type(3)").innerHTML = `${runPrice}`;
+   document.querySelector("td.ticket-data:nth-of-type(4)").innerHTML = `${runPrice}`;
 
 // Show Ticket su Click
-   
+   document.querySelector(".hidden").classList.replace("hidden", "show");
+})
+
+// Hide ticket su click bottone reset
+const resetBtn = document.getElementById("reset-btn");
+
+resetBtn.addEventListener('click', function() {
+   document.querySelector(".show").classList.replace("show", "hidden");
 })
