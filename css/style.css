@@ -1,0 +1,86 @@
+/* RESET */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* BODY */
+body {
+   background-color: #b91450;
+   padding: 1.875rem;
+   font-size: 1.25rem;
+}
+h1 {
+   color: white;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+/* CONTAINERS */
+.container {
+   max-width: 62rem;
+   margin: auto;
+}
+#input-field, #ticket-field {
+   width: 100%;
+   background-color: white;
+   margin: 1.875rem 0;
+   padding: 1.875rem;
+   border-radius: .5rem;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* INPUT FIELD */
+.inputs-div {
+   display: flex;
+   justify-content: center;
+   font-weight: bold;
+   color: #b91450;
+}
+#input-field .col-3 {
+   width: 100% / 4 - .625rem ;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin: 10px;
+}
+
+#input-field .col-3 label {
+   margin-bottom: 10px;
+}
+#input-field input, select {
+   border: 1px solid #b91450;
+   border-radius: .25rem;
+   padding: .5rem;
+}
+#input-field button {
+   color: #b91450;
+   padding: .375rem;
+   font-size: inherit;
+   font-weight: bold;
+}
+#input-field button:first-of-type {
+   margin-right: .375rem;
+}
+
+/* TICKET */
+.hidden {
+   display: none;
+   transition: display .5s;
+}
+
+#ticket-field table {
+   width: 100%;
+   text-align: left;
+   border-collapse: collapse;
+   margin-top: 1.25rem;
+   border: 1px solid grey;
+}
+#ticket-field th, #ticket-field td {
+   border-left: 1px solid grey;
+   padding: .625rem;
+}
+#ticket-field th:first-child {
+   background-color: grey;
+}
