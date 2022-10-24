@@ -1,12 +1,25 @@
 "use strict";
 
-// Localizzazione bottone Genera
-const generateBtn = document.getElementById("generate-btn");
+// Localizzazione form submit
+const formSubmit = document.querySelector("form.input-field");
 
-// Creazione evento su click bottone Genera
-generateBtn.addEventListener('click', function() {
+// // Alternativamente Localizzazione bottone Genera
+// // da utilizzare per codice alternativo che segue in commento "event.preventDefault"
+// const generateBtn = document.getElementById("generate-btn");
 
-// Document.Get per prendere i dati inseriti negli input richiesti
+// Evento su click del form submit
+// a differenza del prossimo evento abilita l'utilizzo dei required fields
+// Workaround per poter utilizzare funzione di submit senza ricaricare la pagina
+formSubmit.addEventListener('submit', function(event) {
+   // Previene funzione primaria di event cioè la ricarica della pagina
+	event.preventDefault()
+   
+// // Alternativamente evento su click bottone Genera
+// // per utilizzare settare button type in html come "button"
+// // disabilita utilizzo del "required" negli input
+// generateBtn.addEventListener('click', function() {
+
+// Document.Get per prendere i dati inseriti negli input
    let firstName = document.getElementById("first-name").value;
    let lastName = document.getElementById("last-name").value;
    let runKm = Number(document.getElementById("km").value);
